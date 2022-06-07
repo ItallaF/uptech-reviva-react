@@ -1,0 +1,93 @@
+
+.banner{
+    background: #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 31%;
+    height: 10vw;
+    margin: 1% 0 0 4%;
+    width: 90%;
+    @media screen and (max-width: 576px){
+        height: 26vh;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        height: 26vh;
+    }
+    @media screen and (min-width: 769px) and (max-width: 992px){
+        height: 26vh;
+    }
+}
+.banner__conteudo{
+    grid-column: 1 / -1;
+    height: 26vh;
+}
+.banner__conteudo__texto{
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 3em;
+    @media screen and (max-width: 576px){
+        font-size: 1em;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        font-size: 1em;
+    }
+    @media screen and (min-width: 769px) and (max-width: 992px){
+        font-size: 1rem;
+    }
+}
+.banner__conteudo__titulo{
+    font-size: 2rem;
+    line-height: 0vh;
+    margin-top: -4vh;
+    @extend .banner__conteudo__texto;
+    @media screen and (max-width: 576px){
+        font-size: 1rem;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        font-size: 1.3rem;
+    }
+    @media screen and (min-width: 769px) and (max-width: 992px){
+        font-size: 2rem;
+    }
+    
+}
+
+.banner__logo{
+    grid-column: 2 / span 2;
+    margin-top: 1rem;
+
+    .logo__titulo{
+        color: #FFF;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 75%;
+        margin-block-end: 0%;
+        text-align: end;
+        line-height: 1vh;
+        
+        @media screen and (max-width: 576px){
+            font-size: 1.5rem;
+            line-height: 4vh;
+        }
+        @media screen and (min-width: 577px) and (max-width: 768px){
+            font-size: 1.5rem;
+            line-height: 4vh;
+        }
+        @media screen and (min-width: 769px) and (max-width: 992px){
+            font-size: 1.5rem;
+            line-height: 4vh;
+        }
+    }
+    .logo__texto{
+        color: #FFF;
+        font-family: Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1em;
+        text-align: end;
+        margin-top: 1%;
+    }
+}
