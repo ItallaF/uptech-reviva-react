@@ -12,7 +12,6 @@ const stateInitial = {
 
 export default function ProductList(){
 
-    
     const [cart, setCart] = useState(listProduct);
     
     function removeUnit(productSelect: product__stock){
@@ -25,7 +24,7 @@ export default function ProductList(){
             const quantityCurrent  =   (i: any) => {
                 setCart(productSelect => productSelect.map((item, index) => {
                     const quantity = item.quantity_available + 1;
-                    
+                    console.log(item)
                     return item
     
                 })
