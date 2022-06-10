@@ -1,6 +1,6 @@
-import style from './form.module.scss';
+import style from './searchForm.module.scss';
 
-export default function Form(){
+export default function SearchForm(){
     return(
         <form className={style.formulario}>
             <input type="text" className={style.formulario__pesquisar}

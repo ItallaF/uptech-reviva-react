@@ -1,4 +1,4 @@
-
+@import '../../style.module.scss';
 
 .produto__lista {
     margin: 0 0 0 4%;
@@ -17,14 +17,15 @@
     }
 }
 .produto__lista__titulo {
-    color: #000;
-    font-family: Helvetica, sans-serif;
+    color: $colorText;
+    font-family: $font;
     font-style: normal;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     font-weight: bold;
     line-height: 2%;
+    margin: 4%;
     @media screen and (max-width: 576px){
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         text-align: center;
         line-height: 8vh;
     }
@@ -90,24 +91,29 @@
     width: 100%;
 }
 .produto__lista__imagem__botao__tamanho {
-    border: 1px solid #C4C4C4;
-    border-radius: 15%;
+    @include borderTamanho;
     grid-column: 1;
-    height: 7vh;
-    margin: 1%;
+    height: 4vh;
+    font-size: 3em;
+    text-align: center;
     width: 2vw;
     @media screen and (max-width: 576px){
         height: 4vh;
         width: 5vw;
+        font-size: 3em;
+        text-align: center;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        height: 5vh;
-        width: 5vw;
+        height: 4vh;
+        width: 4vw;
+        font-size: 3em;
+        text-align: center;
     }
     @media screen and (min-width: 769px) and (max-width: 992px){
-        height: 5vh;
-        margin: 1%;
+        height: 4vh;
         width: 3vw;
+        font-size: 3em;
+        text-align: center;
     }
 }
 input{
@@ -115,22 +121,26 @@ input{
 }
 .produto__lista__texto {    
     font-weight: 400;
-    font-size: 1.6em;
-    height: 14vh;
+    font-size: 2.9em;
+    height: 4vh;
     text-align: start;
     width: 100%;
     @media screen and (max-width: 576px){
         width: 50vw;
+        height: 5vh;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        height: 0vh;
     }
     @media screen and (min-width: 769px) and (max-width: 992px){
-        height: 15vh;
+        height: 11vh;
     }
 }
 .produto__lista__preco {
-    color: #fa3939;
+    color: $colorPreco;
     font-weight: bold;
-    font-size: 2em;
-    height: 6vh;
+    font-size: 4em;
+    height: 7vh;
     text-align: start;
     width: 100%;
     
@@ -142,43 +152,11 @@ input{
     align-items: center;
 }
 .produto__lista__botao__sacola {
-    align-items: center;
-    background: #1C7947;
-    border-radius: 1vh;
-    border: 1px solid #C4C4C4;
-    color: #151515;
-    font-weight: bold;
-    font-size: 1.5rem;
-    height: 8vh;
-    line-height: 6vh;
-    display: flex;
-    justify-content: space-evenly;
-    width: 17vw;
-
-    @media screen and (max-width: 576px){
-        font-size: 1rem;
-        height: 8vh;
-        line-height: 8vh;
-        width: 40vw;
-    }
-    @media screen and (min-width: 577px) and (max-width: 768px){
-        width: 40vw;
-    }
-    @media screen and (min-width: 769px) and (max-width: 992px){
-        font-size: 1.2rem;
-        width: 28vw;
-    }
+    @include buttonSacola;
+    width: 17vw;   
 }
 .produto__lista__botao__svg {
     place-self: end;
     margin-top: 3%;
     min-block-size: fit-content;
-    @media screen and (max-width: 576px){
-        align-self: normal;
-        margin-top: 0%;
-    }
-    @media screen and (min-width: 577px) and (max-width: 768px){
-        align-self: normal;
-        margin-top: 0%;
-    }
 }

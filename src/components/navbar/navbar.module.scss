@@ -1,15 +1,17 @@
+@import '../../style.module.scss';
+
 .menu__botao{
     background-color: transparent;
     border: none;
-    color: #FFF;
-    font-size: 2em;
+    color: $colorTextDestaque;
+    font-size: 7em;
     max-block-size: -webkit-fill-available;
     place-content: flex-end;
     display: none;
     :hover {
         cursor: pointer;
         opacity: 0.8;
-        background-color: #000;
+        background-color: $colorTextDestaque;
     }
     :focus~.menu__link {
         height: 260px;
@@ -20,7 +22,7 @@
 }
 a:hover,
 .menu {
-    background-color: #000;
+    background-color: $colorBackgroundDestaque;
     height: 10vh;
     left: 0px;
     width: 100%;
@@ -31,7 +33,7 @@ a:hover,
     @media screen and (max-width: 576px){
         right: 0;
         width: 50vw;
-        background: #FFFF;
+        background: $colorBackgroundDestaque;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -44,9 +46,9 @@ a:hover,
     
 }
 .menu__link {
-    color: #FFFF;
+    color: $colorTextDestaque;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 2.8em;
     line-height: 10vh;
     list-style-type: none;        
     justify-content: space-between;
@@ -58,7 +60,7 @@ a:hover,
         text-align: center;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        font-size: 0.9em;
+        font-size: 2.2em;
         font-weight: 100;
     }
 }
