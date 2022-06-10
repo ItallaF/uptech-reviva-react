@@ -1,0 +1,113 @@
+
+.blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    height: 100%;
+    margin: 0 0 0 4%;
+    @media screen and (max-width: 576px){
+        grid-template-columns: 1fr;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        grid-template-columns: 1fr;
+    }
+}
+.blog__titulo {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 83%;
+    @media screen and (max-width: 576px){
+        font-size: 1.8rem;
+        width: 90%;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        width: 90%;
+    }
+}
+.blog__imagem__principal {
+    margin: 0%;
+    @media screen and (max-width: 576px){
+        text-align: center;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        text-align: center;
+    }
+}
+.blog__imagem__principal__tamanho {
+    height: 63vh;
+    width: 37vw;
+    @media screen and (max-width: 576px){
+        width: 82vw;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        height: 72vh;
+        width: 82vw;
+    }
+}
+.blog__texto__principal {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.1em;
+    width: 80%;
+    @media screen and (max-width: 576px){
+        margin: 0 0 0 6%;
+        line-height: 135%;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        margin: 0 0 0 6%;
+        line-height: 135%;
+    }
+}
+.blog__conteudo {
+    margin-top: 12%;
+    width: 100%;
+}
+.blog__secundario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    @media screen and (max-width: 576px){
+        grid-template-columns: 1fr;
+    }
+}
+.blog__imagem__secundaria {
+    margin: 0%;
+    width: 78%;
+}
+.blog__imagem__secundaria__tamanho {
+    height: 40vh;
+    width: 20vw;
+    @media screen and (max-width: 576px){
+        height: 57vh;
+        margin: 0 0 0 6%;
+        width: 82vw;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        height: 52vh;
+        width: 45vw;
+    }
+}
+.blog__texto__secudario {
+    color: #000;
+    font-size: 1.2em;
+    margin: 0%;  
+    @media screen and (max-width: 576px){
+        margin-top: 2%;
+    }  
+}
+.blog__terciario {
+    @extend .blog__secundario;
+    margin-top: 4%;
+}
+.blog__imagem__terciaria {
+    @extend .blog__imagem__secundaria;
+}
+.blog__imagem__terciaria__tamanho {
+    @extend .blog__imagem__secundaria__tamanho;
+}
+.blog__texto__terceiro {
+    @extend .blog__texto__secudario;
+}
+
