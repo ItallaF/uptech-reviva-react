@@ -7,12 +7,13 @@ import ProductList from '../../components/listProduct/listProduc';
 import Navbar from '../../components/navbar/navbar';
 import SearchForm from '../../components/search_form/searchForm';
 import { listProduct } from './date';
-
+import { RecoilRoot } from 'recoil';
 
 export default function Home(){
     const productsLauntch = listProduct.filter(product => product.sectionProduct === 1);
     const productsSummer = listProduct.filter(product => product.sectionProduct === 2) ;
     return (
+        <RecoilRoot>
         <aside>
             <Header />
             <Navbar />
@@ -23,6 +24,7 @@ export default function Home(){
             <Blog />
             <Footer />
         </aside>
+        </RecoilRoot>
     )
 }
 

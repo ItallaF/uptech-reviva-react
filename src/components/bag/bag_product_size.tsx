@@ -1,8 +1,11 @@
+import { useRecoilValue } from 'recoil';
 import style from './bag.module.scss';
-import { cart } from './cart_product';
+import { listCarState } from './listCartState';
 
 
 export default function ProductSizeBag(){
+    const productCart = useRecoilValue(listCarState);
+
     return(
         <>
         <div className={style.minha__sacola__detlahes__produto__tamanho}>
@@ -10,7 +13,7 @@ export default function ProductSizeBag(){
                 Tamanho escolhido
             </h3>
             <div className={style.minha__sacola__imagem__botao}>  
-                {cart.map((products) => 
+                {productCart.map((products) => 
                 products.sizesAvailable.map((t, index) => (
                 <label key={index} className={style.minha__sacola__botao__tamanho}>
                     {products.sizesAvailable[index]}

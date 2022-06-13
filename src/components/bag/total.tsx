@@ -1,10 +1,11 @@
-import { listProduct, productStock } from '../../pages/home/date';
+import { useRecoilValue } from 'recoil';
 import style from './bag.module.scss';
-import { cart } from './cart_product';
+import { listCarState } from './listCartState';
 
 
 export default function Total(){
-    const cartPriceTotal = cart.reduce(
+    const productCart = useRecoilValue(listCarState);
+    const cartPriceTotal = productCart.reduce(
         (acc, item) => acc + item.price * item.quantity,
         0
       );

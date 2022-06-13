@@ -10,11 +10,13 @@ import ValueProductBag from '../../components/bag/bag_value_product';
 import QuantyBag from '../../components/bag/bag_quanty';
 import Subtotal from '../../components/bag/subtotal';
 import Total from '../../components/bag/total';
+import { RecoilRoot } from 'recoil';
 
 
 export default function Cart(){
     return(
         <>
+        <RecoilRoot>
             <Header />
             <Navbar />
             <SearchForm />
@@ -54,6 +56,7 @@ export default function Cart(){
             </section>  
             </section>
             <Footer />
+            </RecoilRoot>
         </>
     )
 }
