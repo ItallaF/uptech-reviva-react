@@ -3,7 +3,8 @@ import { atom } from "recoil";
 export interface productImage {
     url: string;
     description: string;   
-  } 
+  }
+  
   
 export interface ProductStock {
 id: number;
@@ -17,8 +18,8 @@ sectionProduct: number;
 images: productImage[];
 }
 
-export const listProduct = atom<ProductStock[]> ({
-  key: 'listProduct',
+export const listPost = atom<ProductStock[]> ({
+  key: 'listPost',
   default: [
     {
       id: 0,

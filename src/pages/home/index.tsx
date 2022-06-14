@@ -7,24 +7,25 @@ import ProductList from '../../components/listProduct/listProduc';
 import Navbar from '../../components/navbar/navbar';
 import SearchForm from '../../components/search_form/searchForm';
 import { listProduct } from './date';
-import { RecoilRoot } from 'recoil';
+import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
 
 export default function Home(){
-    const productsLauntch = listProduct.filter(product => product.sectionProduct === 1);
-    const productsSummer = listProduct.filter(product => product.sectionProduct === 2) ;
+    const listProductSection = useRecoilValue(listProduct);
+    const productsLauntch = Object.values(listProductSection).filter(product => product.sectionProduct === 1);
+    const productsSummer = Object.values(listProductSection).filter(product => product.sectionProduct === 2);
     return (
-        <RecoilRoot>
+        
         <aside>
             <Header />
             <Navbar />
             <SearchForm />
             <ProductList title='Ultimos Lançamentos' ProductsSection={productsLauntch} />      
             <Banner />
-            <ProductList title='Coleção Verão 2022' ProductsSection={productsSummer} />
+            <ProductList title='Coleção Verão 2022' ProductsSection={productsSummer} /> 
             <Blog />
             <Footer />
         </aside>
-        </RecoilRoot>
+        
     )
 }
 
