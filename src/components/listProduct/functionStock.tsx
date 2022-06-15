@@ -1,4 +1,5 @@
-import { productImage } from "../postState";
+import { productImage } from "../types/typeCart";
+
 
 
 export const decrementStock = (product: any, item: {

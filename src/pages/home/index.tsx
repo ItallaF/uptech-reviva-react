@@ -6,7 +6,7 @@ import ProductList from '../../components/listProduct/listProduc';
 //import ProductListSummer from '../../components/listProduct/lIstProductSummer';
 import Navbar from '../../components/navbar/navbar';
 import SearchForm from '../../components/search_form/searchForm';
-import { listProduct } from './date';
+import { listProduct } from '../../datas/date';
 import { RecoilRoot, useRecoilState, useRecoilValue } from 'recoil';
 
 export default function Home(){

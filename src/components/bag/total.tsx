@@ -1,15 +1,16 @@
 import { useRecoilValue } from 'recoil';
 import style from './bag.module.scss';
-import { listCarState } from './listCartState';
+import { updateQuantityCart } from './listCartState';
 
 
 export default function Total(){
-    const productCart = useRecoilValue(listCarState);
-    const cartPriceTotal = productCart.reduce(
-        (acc, item) => acc + (item.price * item.quantity),
+    const productCart = useRecoilValue(updateQuantityCart);
+    const cartPriceTotal = productCart
+    .reduce((subtotal, item) =>
+        subtotal + (item.price * item.sectionProduct),
         0
       );
-      console.log(cartPriceTotal)
+      
 
     return(
         <div className={style.minha__sacola__total}>

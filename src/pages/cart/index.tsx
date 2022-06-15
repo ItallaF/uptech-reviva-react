@@ -21,9 +21,9 @@ export default function Cart(){
             <Navbar />
             <SearchForm />
             <section>
-            <ProductBag />
+            <ProductBag id={0} nameProduct={''} url={''} price={0} description={''} sizesAvailable={[]} quantity={0} sectionProduct={0} images={[]} />
             <div className={style.minha__sacola2}>
-                <Total />
+            <Total />
             </div>
             </section>     
             <Footer />
