@@ -8,7 +8,7 @@ import { RecoilRoot } from 'recoil';
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-    <Cart />
+    <Home />
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById('root') 
