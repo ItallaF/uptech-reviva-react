@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil';
 import { listProduct } from '../../datas/date';
-import { addToCart } from '../bag/addPtoduct_cart';
-import { stateCart } from '../bag/listCartState';
+import { addToCart } from '../bag/FunctionsCart/addPtoduct_cart';
+import { stateCart } from '../bag/StateCart/listCartState';
 import { ProductStock } from '../types/typeCart';
 import { decrementStock } from './functionStock';
 import style from './lisproduct.module.scss';

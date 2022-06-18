@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil';
 import style from './bag.module.scss';
-import { listCarState } from './listCartState';
+import { listCarState } from '../StateCart/listCartState';
 
 
 export default function ValueProductBag(){

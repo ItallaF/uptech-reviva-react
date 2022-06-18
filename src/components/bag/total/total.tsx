@@ -1,13 +1,13 @@
 import { useRecoilValue } from 'recoil';
-import style from './bag.module.scss';
-import { updateQuantityCart } from './listCartState';
+import style from './total.module.scss';
+import { listCarState } from '../StateCart/listCartState';
 
 
 export default function Total(){
-    const productCart = useRecoilValue(updateQuantityCart);
+    const productCart = useRecoilValue(listCarState);
     const cartPriceTotal = productCart
     .reduce((subtotal, item) =>
-        subtotal + (item.price * item.sectionProduct),
+        subtotal + (item.price * item.quantity),
         0
       );
       

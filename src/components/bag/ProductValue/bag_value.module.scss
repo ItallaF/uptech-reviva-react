@@ -1,0 +1,26 @@
+@import '../../../style.module.scss';
+
+.minha__sacola__produto__preco {
+    color: $colorPreco;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 0%;
+    text-align: start;
+    width: 100%;
+    @media screen and (max-width: 576px){
+        text-align:center;
+        font-size: 3.2em;
+    }
+}
+.minha__sacola__quantidade__valor {
+    align-self: center;
+    color: $colorPreco;
+    font-weight: bold;
+    font-size: large;
+    
+    @media screen and (max-width: 576px){
+        text-align:center;
+        font-size: 3.2em;
+    }
+    
+}

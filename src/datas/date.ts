@@ -1,21 +1,5 @@
 import { atom } from "recoil";
-
-export interface productImage {
-    url: string;
-    description: string;   
-  } 
-  
-export interface ProductStock {
-id: number;
-nameProduct: string;
-url: string;
-price: number;
-description: string;
-sizesAvailable: string[];
-quantityAvailable: number;
-sectionProduct: number;
-images: productImage[];
-}
+import { ProductStock } from "../components/types/typeCart";
 
 export const listProduct = atom<ProductStock[]> ({
   key: 'listProduct',

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
-import { listCarState } from './listCartState';
+import { listCarState } from '../StateCart/listCartState';
 import style from './bag.module.scss';
-import { CartItens } from '../types/typeCart';
+import { CartItens } from '../../types/typeCart';
 
 
 export default function ImageBag(): any{

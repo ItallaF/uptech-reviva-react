@@ -1,4 +1,4 @@
-import { productImage } from "../types/typeCart";
+import { productImage } from "../../types/typeCart";
 
 
 export const addToCart = (cart: any, item: {

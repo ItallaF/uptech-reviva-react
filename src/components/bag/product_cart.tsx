@@ -1,53 +1,22 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
-import { listCarState, updateQuantityCart } from './listCartState';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import style from './bag.module.scss';
-import {  useState } from 'react';
 import { CartItens } from '../types/typeCart';
+import { listCarState } from './StateCart/listCartState';
+import { listProduct } from '../../datas/date';
 
 
 
 export default function ProductBag(product: CartItens): any{
      const listProductBag = useRecoilValue(listCarState);
 
-    // const [cartList, setCartList] = useRecoilState(listCarState)
-    // const newCart: CartItens[] =  JSON.parse(JSON.stringify(cartList));
-    // //const productCart = useRecoilValue(listCarState)
-    // const [value, setValue] = useState(product.quantity);
-
-    
-    // const updateQuantity = (value: number) => {
-    //     const indexItem = newCart.findIndex((item: CartItens) => item.id === product.id);
-    //     console.log(product.id)
-    //     newCart[indexItem].quantity = value
-        
-    //     return newCart
-    // }
-
-    // const setUpdateQtyCart = (value: number) => {
-    //     setCartList(() => updateQuantity(value))
-    // }
-    
-    // useEffect(() => {
-    //     setValue(product.quantity)
-    // }, [cartList])
-
-    const newQuanty =  useSetRecoilState(updateQuantityCart);
-    const productCart = useRecoilValue(updateQuantityCart);
-    const [value, setValue] = useState<any>(1);
-    const changeCart = (e:React.ChangeEvent<HTMLInputElement>) =>{
-        const newQuantyProduct = productCart.map((item) => {
-            if(item.id === Number(e.target.id)){
-                console.log({...item, carrinho: e.target.value})
-             return {...item, carrinho: e.target.value}
-            }else{
-                //console.log(item)
-               return item 
-            }
-           
-          })
-          setValue(e.target.value);
-          newQuanty(newQuantyProduct);
-    }
+     const newQuanty = useSetRecoilState(listCarState);
+     function handleChangeQuantity(id: number, quantity: number) {
+         const newQuantyProduct = listProductBag.map((item) => {
+             if (item.id === id) return ({ ...item, quantity })
+             return item
+         })
+         newQuanty(newQuantyProduct);
+     };
 
 
     return(
@@ -88,9 +57,9 @@ export default function ProductBag(product: CartItens): any{
                     Quantidade
                 </h3>
                 <input type="number" id={`${products.id}`} name={`${products.id}`}
-                min={1} max={99} 
-                className={style.minha__sacola__quantidade__valor}
-                onChange={changeCart} value={value} 
+                min={1} max={99} className={style.minha__sacola__quantidade__valor}
+                onChange={(e) => handleChangeQuantity(products.id, +e.target.value)}
+                value={products.quantity}
                 />
                 </div>
                 <div className={style.minha__sacola__subtotal__produto}>
@@ -98,7 +67,7 @@ export default function ProductBag(product: CartItens): any{
                         Subtotal
                     </h3>
                     <p className={style.minha__sacola__produto__preco}>R$
-                        {(products.price * value ).toFixed(2).replace('.',',')}
+                    {(products.price * products.quantity).toFixed(2).replace('.', ',')}
                     </p>
                 </div>
             </section>
