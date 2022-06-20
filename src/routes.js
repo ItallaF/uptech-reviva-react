@@ -6,6 +6,7 @@ import PatternPage from './pages/patternPage/patternPage';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { NotFound } from './pages/NotFound/notFoud';
+import Details from './pages/details';
 
 
 
@@ -15,6 +16,7 @@ export default function AppRouter() {
             <Routes>
                 <Route path='/' element={<PatternPage />}>
                     <Route index element={<Home />} />
+                    <Route path='/Details' element={<Details />} />
                     <Route path='/Cart' element={<Cart />} />
                     <Route path='*' element={<NotFound />} />
                 </Route>

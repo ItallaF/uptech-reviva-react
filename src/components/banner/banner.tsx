@@ -1,13 +1,12 @@
-import style from './banner.module.scss';
 import LogoBanner from './logo_banner';
 import TextBanner from './text_banner';
-
+import { BannerSection } from './Styled/styledBanner';
 
 export default function Banner(){
     return(
-        <section className={style.banner}>
+        <BannerSection>
             <TextBanner />
             <LogoBanner />
-        </section>
+        </BannerSection>
     )
 }
