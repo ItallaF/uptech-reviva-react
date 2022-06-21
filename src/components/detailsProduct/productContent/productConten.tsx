@@ -30,7 +30,7 @@ export default function ProductContent() {
 
     const [productInStock, setProductInStock] = useRecoilState(listProduct);
     const [cart, setCart] = useRecoilState(stateCart);
-    const navigate = useNavigate();
+
     if (!products) {
 
         return <NotFound />;
@@ -38,9 +38,9 @@ export default function ProductContent() {
     }
 
     const handleAddToCart = (product: ProductStock) => {
-        const newCart = addToCart(cart, product); 
+        const newCart = addToCart(cart, product);
         setCart(newCart);
-        navigate(`/Cart`, { state: { product }, replace: true });
+
 
         console.log(productInStock, product);
         const newProduct = decrementStock(productInStock, product);

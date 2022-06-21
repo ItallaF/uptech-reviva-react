@@ -5,13 +5,13 @@ import { Footersection } from './styledContentFooter';
 import Subscription from '../SubscritionFooter/subscription';
 
 
-export default function ContentFooter(){
-    return(
-        <Footersection>  
-        <MenuFooter />
-        <MediaSocial />
-        <Contact />
-        <Subscription />
+export default function ContentFooter() {
+    return (
+        <Footersection>
+            <MenuFooter />
+            <MediaSocial />
+            <Contact />
+            <Subscription />
         </Footersection>
     );
 }

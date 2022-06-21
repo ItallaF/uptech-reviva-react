@@ -7,7 +7,7 @@ import { decrementStock } from "../listProduct/functionStock";
 import { ProductStock } from "../types/typeCart";
 
 
-export default function HandleAdd (product: ProductStock) {
+export default function HandleAdd(product: ProductStock) {
     const [productInStock, setProductInStock] = useRecoilState(listProduct);
     const [cart, setCart] = useRecoilState(stateCart);
     const navigate = useNavigate();

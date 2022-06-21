@@ -129,7 +129,7 @@ export const ProductListImageButtonSizeInput = styled.input`
 export const ProductListText = styled.div`
     font-weight: 400;
     font-size: 2.9em;
-    height: 4vh;
+    height: 6vh;
     text-align: start;
     width: 100%;
     @media screen and (max-width: 576px){

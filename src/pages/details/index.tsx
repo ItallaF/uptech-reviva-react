@@ -18,18 +18,18 @@ export default function Details() {
 
         return <NotFound />;
 
-    }else{
+    } else {
         const productsSummer = Object.values(product).filter(item => item.sectionProduct === 2);
-    return (
-        <>
-            <DetailsProduct>
-                <ImageProductDetais />
-                <ProductContent />
-            </DetailsProduct>
-            <Banner />
-            <ProductList title='Quem comprou camiseta Reviva K22, também levou um desses para casa!' ProductsSection={productsSummer} /> 
-        </>
-    );
+        return (
+            <>
+                <DetailsProduct>
+                    <ImageProductDetais />
+                    <ProductContent />
+                </DetailsProduct>
+                <Banner />
+                <ProductList title='Quem comprou camiseta Reviva K22, também levou um desses para casa!' ProductsSection={productsSummer} />
+            </>
+        );
     }
-    
+
 }

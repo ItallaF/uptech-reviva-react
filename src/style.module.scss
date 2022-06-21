@@ -5,11 +5,7 @@ $font: Helvetica, sans-serif;
 //cores
 $colorBackground:#ffffff;
 $colorText: #000000;
-$colorBorder: #C4C4C4;
-$colorBackgroundDestaque: #151515;
-$colorTextDestaque: #f3eded;
-$colorPreco: #fa3939;
-$colorBackgroundButton: #1C7947;
+
 
 html, body {
     background-color: $colorBackground;
@@ -21,56 +17,5 @@ html, body {
     * {
         box-sizing: border-box; 
     }
-}
-
-//mixins
-@mixin borderPesquisa {
-    border: 1px solid $colorBorder;
-    border-radius: 1vh;
-}
-
-@mixin borderImg {
-    border: 1px solid $colorBorder;
-}
-
-@mixin borderTamanho {
-    border: 1px solid $colorBorder;
-    border-radius: 15%;
-}
-
-@mixin buttonSacola {
-    align-items: center;
-    background: $colorBackgroundButton;
-    border-radius: 1vh;
-    border: 1px solid $colorBorder;
-    
-
-    color: $colorTextDestaque;
-    display: grid; 
-    font-weight: bold;
-    font-size: 1.7rem;
-    height: 3vw;
-    line-height: 6vh;
-    width: 33vw;
-    @media screen and (max-width: 576px){
-        height: 8vh;
-        line-height: 8vh;
-        width: 40vw;
-    }
-    @media screen and (min-width: 577px) and (max-width: 768px){
-        height: 8vh;
-        line-height: 8vh;
-        width: 33vw;
-    }
-    @media screen and (min-width: 769px) and (max-width: 992px){
-        height: 8vh;
-        line-height: 8vh;
-        font-size: 1.3rem;
-    }
-}
-@mixin buttonSvgSacola {
-    place-self: end;
-    margin-top: 3%;
-    min-block-size: fit-content;
 }
 

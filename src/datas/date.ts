@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 import { ProductStock } from "../components/types/typeCart";
 
-export const listProduct = atom<ProductStock[]> ({
+export const listProduct = atom<ProductStock[]>({
   key: 'listProduct',
   default: [
     {
@@ -14,12 +14,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 15,
       sectionProduct: 1,
       images: [
-      { url: '../images/products/product01.webp',
-        description: 'Camiseta Basic Soft Preto'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product01.webp',
+          description: 'Camiseta Basic Soft Preto'
+        }
+      ],
+    },
+    {
       id: 1,
       nameProduct: 'Short Feminino Clochard Amarração Abstrato Preto',
       url: 'https://www.riachuelo.com.br/short-feminino-clochard-amarrac-o-abstrato-preto-ak-by-riachuelo-14418436_sku',
@@ -29,12 +30,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 20,
       sectionProduct: 1,
       images: [
-      { url: '../images/products/product02.webp',
-        description: 'Short Feminino Clochard Amarração Abstrato Preto'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product02.webp',
+          description: 'Short Feminino Clochard Amarração Abstrato Preto'
+        }
+      ],
+    },
+    {
       id: 2,
       nameProduct: 'Calça Feminina Pantalona Cintura Alta Amarração Linho',
       url: 'https://www.riachuelo.com.br/calca-feminina-pantalona-cintura-alta-amarrac-o-linho-folhagem-branco-ak-by-riachuelo-14419580_sku',
@@ -44,12 +46,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 25,
       sectionProduct: 1,
       images: [
-      { url: '../images/products/product03.webp',
-      description: 'Calça Feminina Pantalona Cintura Alta Amarração Linho '
-    }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product03.webp',
+          description: 'Calça Feminina Pantalona Cintura Alta Amarração Linho '
+        }
+      ],
+    },
+    {
       id: 3,
       nameProduct: 'Suéter Masculina Manga Longa Tricot Azul Escuro',
       url: 'https://www.riachuelo.com.br/sueter-masculina-manga-longa-tricot-azul-escuro-pool-by-riachuelo-14387026_sku',
@@ -59,12 +62,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 35,
       sectionProduct: 1,
       images: [
-      { url: '../images/products/product04.webp',
-        description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product04.webp',
+          description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
+        }
+      ],
+    },
+    {
       id: 4,
       nameProduct: 'Camiseta Listras - Preto',
       url: 'https://www.riachuelo.com.br/camiseta-listras-11970979_sku',
@@ -74,12 +78,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 50,
       sectionProduct: 2,
       images: [
-      { url: '../images/products/product05.webp',
-       description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product05.webp',
+          description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
+        }
+      ],
+    },
+    {
       id: 5,
       nameProduct: 'Blusa Feminina Manga Curta Onça Preto',
       url: 'https://www.riachuelo.com.br/blusa-feminina-manga-curta-onca-preto-ak-by-riachuelo-14518708_sku',
@@ -89,12 +94,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 100,
       sectionProduct: 2,
       images: [
-      { url: '../images/products/product06.webp',
-        description: 'Blusa Feminina Manga Curta Onça Preto'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product06.webp',
+          description: 'Blusa Feminina Manga Curta Onça Preto'
+        }
+      ],
+    },
+    {
       id: 6,
       nameProduct: 'Blusa de Moletom Feminina Manga Curta Animal Print Zebra Branco',
       url: 'https://www.riachuelo.com.br/blusa-de-moletinho-feminina-manga-curta-animal-print-zebra-branco-ak-by-riachuelo-14517736_sku',
@@ -104,12 +110,13 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 150,
       sectionProduct: 2,
       images: [
-      { url:'../images/products/product07.webp',
-        description: 'Blusa de Moletom Feminina Manga Curta Animal Print Zebra Branco'
-      }
-        ],
-      },
-      {
+        {
+          url: '../images/products/product07.webp',
+          description: 'Blusa de Moletom Feminina Manga Curta Animal Print Zebra Branco'
+        }
+      ],
+    },
+    {
       id: 7,
       nameProduct: 'Blusa Feminina Ampla Manga Curta Listrada Preto',
       url: 'https://www.riachuelo.com.br/blusa-feminina-ampla-manga-curta-listrada-preto-ak-by-riachuelo-14517582_sku',
@@ -119,9 +126,10 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 45,
       sectionProduct: 2,
       images: [
-      { url: '../images/products/product08.webp',
-        description: 'Blusa Feminina Ampla Manga Curta Listrada Preto'
-      }
-    ],
-}]
+        {
+          url: '../images/products/product08.webp',
+          description: 'Blusa Feminina Ampla Manga Curta Listrada Preto'
+        }
+      ],
+    }]
 })

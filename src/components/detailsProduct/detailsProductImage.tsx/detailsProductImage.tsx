@@ -11,13 +11,13 @@ export default function ImageProductDetais() {
     const product = useRecoilValue(listProduct);
     const { id } = useParams();
     const products = product.find(item => item.id === Number(id));
-    
-    if(!products){
+
+    if (!products) {
 
         return <NotFound />;
-    
-      }
-    
+
+    }
+
     return (
         <ImageDetails>
             <ImageProduct src={products.images[0].url} alt={products.images[0].description} />

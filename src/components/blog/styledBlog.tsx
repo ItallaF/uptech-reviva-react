@@ -7,6 +7,7 @@ export const BlogSection = styled.section`
     height: 100%;
     height: 100%;
     margin: 0 0 0 4%;
+    margin-top: 2%;
     @media screen and (max-width: 576px){
         grid-template-columns: 1fr;
     }

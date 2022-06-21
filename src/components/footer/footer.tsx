@@ -3,11 +3,11 @@ import LogoFooter from './FooterSection/content_footer';
 import { FooterContentSection } from './styledFooter';
 
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <FooterContentSection>
-        <LogoFooter />
-        <ContentFooter />
+            <LogoFooter />
+            <ContentFooter />
         </FooterContentSection>
     );
 }

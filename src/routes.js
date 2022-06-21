@@ -1,3 +1,4 @@
+import GlobalStyle from './globalStyle';
 import Footer from './components/footer/footer';
 import Cart from './pages/cart';
 import Home from './pages/home';
@@ -11,13 +12,14 @@ import Details from './pages/details';
 export default function AppRouter() {
     return (
         <Router>
+
             <Routes>
                 <Route path='/' element={<PatternPage />}>
                     <Route index element={<Home />} />
                     <Route path='/Details/:id' element={<Details />} />
                     <Route path='/Cart' element={<Cart />} />
                 </Route>
-                <Route path='*' element={<NotFound />} />                
+                <Route path='*' element={<NotFound />} />
             </Routes>
             <Footer />
         </Router>
