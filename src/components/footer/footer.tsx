@@ -1,14 +1,13 @@
-import ContentFooter from './content_footer';
-import style from './footer.module.scss';
-import LogoFooter from './logo_footer';
-
+import ContentFooter from './FooterLogo/logo_footer';
+import LogoFooter from './FooterSection/content_footer';
+import { FooterContentSection } from './styledFooter';
 
 
 export default function Footer(){
     return(
-        <footer className={style.rodape}>
+        <FooterContentSection>
         <LogoFooter />
         <ContentFooter />
-        </footer>
+        </FooterContentSection>
     );
 }

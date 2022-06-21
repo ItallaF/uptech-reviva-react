@@ -1,24 +1,26 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { listProduct } from "../../../datas/date";
+import { NotFound } from "../../../pages/NotFound/notFoud";
 import { ProductStock } from "../../types/typeCart";
 import { ImageProduct } from "./styles/styledImageProduct";
 import ImageDetails from "./styles/styledProductImage";
 
-export interface Id {
-    id: string | undefined
-}
 
 export default function ImageProductDetais() {
-    const listProductDetails = useRecoilValue(listProduct);
-    const {id} = useParams();
-    console.log(id);
-    const productDetails = listProductDetails.find((item) => item.id === Number(id));
-      
+    const product = useRecoilValue(listProduct);
+    const { id } = useParams();
+    const products = product.find(item => item.id === Number(id));
+    
+    if(!products){
+
+        return <NotFound />;
+    
+      }
     
     return (
         <ImageDetails>
-            <ImageProduct src={process.env.PUBLIC_URL + 'images/products/product01.webp'} alt={productDetails?.images[0].description} />
+            <ImageProduct src={products.images[0].url} alt={products.images[0].description} />
         </ImageDetails>
     );
 }

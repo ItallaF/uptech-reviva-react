@@ -1,30 +1,32 @@
-import { useRecoilValue } from 'recoil';
-import style from './bag_quanty.module.scss';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { listCarState } from '../StateCart/listCartState';
+import { MyBagProductTitle, MyBagQuantityProductValue } from './styledProductQuanty';
 
 
-export default function QuantyBag(){
-    const productCart = useRecoilValue(listCarState);
-    
-    return(
-        <div className={style.minha__sacola__quantidade__produto}>
-            <h3 className={style.minha__sacola__produto__titulo}>
+export default function QuantyBag() {
+    const listProductBag = useRecoilValue(listCarState);
+
+    const newQuanty = useSetRecoilState(listCarState);
+    function handleChangeQuantity(id: number, quantity: number) {
+        const newQuantyProduct = listProductBag.map((item) => {
+            if (item.id === id) return ({ ...item, quantity })
+            return item
+        })
+        newQuanty(newQuantyProduct);
+    };
+
+    return (
+        <div>
+            <MyBagProductTitle>
                 Quantidade
-            </h3>
-            <div className={style.minha__sacola__botao__quantidade}>
-            <label className={style.minha__sacola__quantidade__botao}>-
-            <input type="radio" name="-" className={style.minha__sacola__quantidade__valor} />
-            </label>
-                
-                <p className={style.minha__sacola__quantidade__valor}>
-                    {productCart.map((products) => 
-                        products.quantity
-                    ) }
-                </p>
-                <label className={style.minha__sacola__quantidade__botao}>+
-                    <input type="radio" name="-" className={style.minha__sacola__quantidade__valor} />
-                </label>
-            </div>
+            </MyBagProductTitle>
+            {listProductBag.map((products) =>
+                <MyBagQuantityProductValue type="number" id={`${products.id}`} name={`${products.id}`}
+                    min={1} max={99} onChange={(e) =>
+                        handleChangeQuantity(products.id, +e.target.value)}
+                    value={products.quantity}
+                />
+            )}
         </div>
     );
 }

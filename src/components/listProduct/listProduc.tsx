@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { listProduct } from '../../datas/date';
 import { addToCart } from '../bag/FunctionsCart/addPtoduct_cart';
 import { stateCart } from '../bag/StateCart/listCartState';
 import { ProductStock } from '../types/typeCart';
+
 import { decrementStock } from './functionStock';
-import style from './lisproduct.module.scss';
 import { ProductListButton, ProductListButtonBag, ProductListButtonSvg, ProductListContent, ProductListImageBorder, ProductListImageButton, ProductListImageButtonSize, ProductListImageButtonSizeInput, ProductListImageSize, ProductListPrice, ProductListSection, ProductListText, ProductListTitle } from './styledListProduct';
 
 
@@ -18,15 +18,17 @@ interface ProductlistProps {
 export default function ProductList({ title, ProductsSection }: ProductlistProps){
     const [productInStock, setProductInStock] = useRecoilState(listProduct);
     const [cart, setCart] = useRecoilState(stateCart);
+    const navigate = useNavigate();
        
     const handleAddToCart = (product: ProductStock) => {
         const newCart = addToCart(cart, product); 
         setCart(newCart);
+        navigate(`/Cart`, { state: { product }, replace: true });
 
         console.log(productInStock, product);
         const newProduct = decrementStock(productInStock, product);
         setProductInStock(newProduct);
-    }        
+    }
     
     return(
         <aside>
@@ -35,7 +37,8 @@ export default function ProductList({ title, ProductsSection }: ProductlistProps
             {ProductsSection.map((products) =>
                     <ProductListContent key ={products.id}>
                     <ProductListImageBorder>
-                    <Link to={'/Details/id'} />
+                    <Link to={{
+                        pathname: `/Details/${products.id}`}}/>
                         <ProductListImageSize src={products.images[0].url} alt={products.images[0].description} />
                         <ProductListImageButton >
                             {products.sizesAvailable.map((t, index) => (

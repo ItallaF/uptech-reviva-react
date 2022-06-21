@@ -14,7 +14,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 15,
       sectionProduct: 1,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product01.webp',
+      { url: '../images/products/product01.webp',
         description: 'Camiseta Basic Soft Preto'
       }
         ],
@@ -29,7 +29,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 20,
       sectionProduct: 1,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product02.webp',
+      { url: '../images/products/product02.webp',
         description: 'Short Feminino Clochard Amarração Abstrato Preto'
       }
         ],
@@ -44,7 +44,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 25,
       sectionProduct: 1,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product03.webp',
+      { url: '../images/products/product03.webp',
       description: 'Calça Feminina Pantalona Cintura Alta Amarração Linho '
     }
         ],
@@ -59,7 +59,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 35,
       sectionProduct: 1,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product04.webp',
+      { url: '../images/products/product04.webp',
         description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
       }
         ],
@@ -74,7 +74,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 50,
       sectionProduct: 2,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product05.webp',
+      { url: '../images/products/product05.webp',
        description: 'Suéter Masculina Manga Longa Tricot Azul Escuro'
       }
         ],
@@ -89,7 +89,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 100,
       sectionProduct: 2,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product06.webp',
+      { url: '../images/products/product06.webp',
         description: 'Blusa Feminina Manga Curta Onça Preto'
       }
         ],
@@ -104,7 +104,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 150,
       sectionProduct: 2,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product07.webp',
+      { url:'../images/products/product07.webp',
         description: 'Blusa de Moletom Feminina Manga Curta Animal Print Zebra Branco'
       }
         ],
@@ -119,7 +119,7 @@ export const listProduct = atom<ProductStock[]> ({
       quantityAvailable: 45,
       sectionProduct: 2,
       images: [
-      { url: process.env.PUBLIC_URL + 'images/products/product08.webp',
+      { url: '../images/products/product08.webp',
         description: 'Blusa Feminina Ampla Manga Curta Listrada Preto'
       }
     ],

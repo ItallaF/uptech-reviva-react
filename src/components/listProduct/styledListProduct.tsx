@@ -15,6 +15,9 @@ export const ProductListTitle =styled.h4`
         text-align: center;
         line-height: 8vh;
     }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        line-height: 6vh;
+    }
 `;
 
 export const ProductListSection = styled.section`

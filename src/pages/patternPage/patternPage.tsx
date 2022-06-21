@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "../../components/header/header_index";
+import Header from "../../components/header/HeaderIndex/headerIndex";
 import Navbar from "../../components/navbar/navbar";
 import SearchForm from "../../components/search_form/searchForm";
 

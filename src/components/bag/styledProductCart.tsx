@@ -11,6 +11,7 @@ export const ProductMyBag = styled.section`
     width: 90%;
     @media screen and (max-width: 576px){
         grid-template-columns: 1fr;
+        text-align: center;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
         grid-template-columns: repeat(3, 1fr);
@@ -61,7 +62,6 @@ export const MyBagProductDescription = styled.p`
 
     @media screen and (max-width: 576px){
         font-size: 2.5em;
-        text-align: start;
         line-height: 5vh;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
@@ -169,4 +169,23 @@ export const MyBagQuantityProductValue = styled.input`
         text-align:center;
         font-size: 3.2em;
     }
+`;
+
+export const MyBag2 = styled.div`
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 16% 18% 9% 10% 7% 18% 18%;
+    grid-column: 1 / 7;
+    @media screen and (max-width: 576px){
+        grid-template-columns: none;
+    }
+    @media screen and (min-width: 577px) and (max-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 769px) and (max-width: 992px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 993px) and (max-width: 1200px){
+        grid-template-columns: 15% 23% 13% 16% 12% 16%;
+    }   
 `;

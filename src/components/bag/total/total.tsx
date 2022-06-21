@@ -1,45 +1,45 @@
 import { useRecoilValue } from 'recoil';
-import style from './total.module.scss';
 import { listCarState } from '../StateCart/listCartState';
+import { MyBagTotal, MyBagTotalButton, MyBagTotalButtonPay, MyBagTotalContent, MyBagTotalFinal } from './styledTotal';
 
 
-export default function Total(){
+export default function Total() {
     const productCart = useRecoilValue(listCarState);
     const cartPriceTotal = productCart
-    .reduce((subtotal, item) =>
-        subtotal + (item.price * item.quantity),
-        0
-      );
-      
+        .reduce((subtotal, item) =>
+            subtotal + (item.price * item.quantity),
+            0
+        );
 
-    return(
-        <div className={style.minha__sacola__total}>
-                    <div className={style.minha__sacola__total__final}>
-                        <h4 className={style.minha__sacola__total__conteudo}>Total</h4>
-                        <h4 className={style.minha__sacola__total__conteudo}>
-                            {cartPriceTotal.toFixed(2).replace('.',',')}
-                        </h4>
-                    </div>
-                    <div className={style.minha__sacola__total__final}>
-                        <p className={style.minha__sacola__total__conteudo}>1 x 
-                        {cartPriceTotal.toFixed(2).replace('.',',')}</p>
-                        <p className={style.minha__sacola__total__conteudo}>=</p>
-                        <p className={style.minha__sacola__total__conteudo}>
-                            {cartPriceTotal.toFixed(2).replace('.',',')}
-                        </p>
-                    </div>
-                    <div className={style.minha__sacola__total__final}>
-                        <p className={style.minha__sacola__total__conteudo}>2 x 
-                            {(cartPriceTotal/2).toFixed(2).replace('.',',')}
-                        </p>
-                        <p className={style.minha__sacola__total__conteudo}>=</p>
-                        <p className={style.minha__sacola__total__conteudo}>
-                            {cartPriceTotal.toFixed(2).replace('.',',')}
-                        </p>
-                    </div>
-                <div className={style.minha__sacola__botao__total}>
-                    <button className={style.minha__sacola__botao__total__pagamento} >Ir para pagamento</button>               
-                </div>
-                </div>
+
+    return (
+        <MyBagTotal>
+            <MyBagTotalFinal>
+                <MyBagTotalContent>Total</MyBagTotalContent>
+                <MyBagTotalContent>
+                    {cartPriceTotal.toFixed(2).replace('.', ',')}
+                </MyBagTotalContent>
+            </MyBagTotalFinal>
+            <MyBagTotalFinal>
+                <MyBagTotalContent>1 x
+                    {cartPriceTotal.toFixed(2).replace('.', ',')}</MyBagTotalContent>
+                <MyBagTotalContent>=</MyBagTotalContent>
+                <MyBagTotalContent>
+                    {cartPriceTotal.toFixed(2).replace('.', ',')}
+                </MyBagTotalContent>
+            </MyBagTotalFinal>
+            <MyBagTotalFinal>
+                <MyBagTotalContent>2 x
+                    {(cartPriceTotal / 2).toFixed(2).replace('.', ',')}
+                </MyBagTotalContent>
+                <MyBagTotalContent>=</MyBagTotalContent>
+                <MyBagTotalContent>
+                    {cartPriceTotal.toFixed(2).replace('.', ',')}
+                </MyBagTotalContent>
+            </MyBagTotalFinal>
+            <MyBagTotalButton>
+                <MyBagTotalButtonPay>Ir para pagamento</MyBagTotalButtonPay>
+            </MyBagTotalButton>
+        </MyBagTotal>
     );
 }

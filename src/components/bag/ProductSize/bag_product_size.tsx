@@ -1,28 +1,27 @@
 import { useRecoilValue } from 'recoil';
 import style from './productSize.module.scss';
 import { listCarState } from '../StateCart/listCartState';
+import { MyBagButtonSize, MyBagButtonSizeInput, MyBagProductTitle } from './styledProductSize';
 
 
-export default function ProductSizeBag(){
+export default function ProductSizeBag() {
     const productCart = useRecoilValue(listCarState);
 
-    return(
+    return (
         <>
-        <div className={style.minha__sacola__detlahes__produto__tamanho}>
-            <h3 className={style.minha__sacola__produto__titulo}>
-                Tamanho escolhido
-            </h3>
-            <div className={style.minha__sacola__imagem__botao}>  
-                {productCart.map((products) => 
-                products.sizesAvailable.map((t, index) => (
-                <label key={index} className={style.minha__sacola__botao__tamanho}>
-                    {products.sizesAvailable[index]}
-                    <input type='radio' name="size" />
-                </label>
-            ))
-            ) }
-            </div>
-        </div>
+            {productCart.map((products) =>
+                <div>
+                    <MyBagProductTitle>
+                        Tamanho escolhido
+                    </MyBagProductTitle>
+                    {products.sizesAvailable.map((t, index) => (
+                        <MyBagButtonSize key={index}>
+                            <MyBagButtonSizeInput type="radio" name="tamanho" value={products.sizesAvailable[index]} />
+                            {products.sizesAvailable[index]}
+                        </MyBagButtonSize>
+                    ))}
+                </div>
+            )}
         </>
     );
 }
