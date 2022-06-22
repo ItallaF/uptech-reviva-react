@@ -16,10 +16,11 @@ export const FormSearch = styled.input`
     border: 1px solid #353333;
     margin-right: 8px;
     width: 85vw;
+    font-size: 1.1rem;
     @media screen and (max-width: 576px){
         height: 8vh;
         width: 78vw;
-        font-size: 1.1em;
+        font-size: 1.1rem;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
         height: 8vh;

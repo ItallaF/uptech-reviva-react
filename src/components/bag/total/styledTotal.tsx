@@ -10,8 +10,7 @@ export const MyBagTotal = styled.div`
     grid-row: span 3/span 1;
     margin-top: -279%;
     @media screen and (max-width: 576px){
-        grid-column: 2/7;
-        grid-row: 5;
+        grid-column: 1/7;
         justify-content:center;
         margin: 0 0 0 6%;
         margin-top: 0%;
@@ -20,10 +19,14 @@ export const MyBagTotal = styled.div`
     @media screen and (min-width: 577px) and (max-width: 768px){
         margin-top: 0%;
         grid-column: 2/ 3;
-        grid-row: 5;
         width: 60vw;
         
     }
+    @media screen and (min-width: 769px) and (max-width: 992px){
+        margin-top: 0%;
+        grid-column: 2/ 3;
+        width: 60vw;
+    } 
 `;
 
 export const MyBagTotalFinal = styled.div`

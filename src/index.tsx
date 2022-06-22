@@ -1,9 +1,10 @@
 import React from 'react';
+import { GlobalStyle } from './globalStyle';
 
-import './style.module.scss';
 import { RecoilRoot } from 'recoil';
 import ReactDOM from 'react-dom/client';
 import Routes from './routes';
+
 
 
 const root = ReactDOM.createRoot(
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <GlobalStyle />
     <RecoilRoot>
       <Routes />
     </RecoilRoot>

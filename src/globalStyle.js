@@ -1,19 +1,17 @@
+import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { colorBackground, colorText, font } from './components/ui/variables';
 
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     *{
-        background-color: #ffffff;
-        font-family: "Helvetica", sans-serif;
+
+        box-sizing: border-box; 
+        font-family:  "Helvetica", sans-serif;
+        font-size: 62.5%;
         margin: 0%;
         padding: 0%;
-        font-size: 62.5%;
-        color: #000000;
-        * {
-        box-sizing: border-box; 
-    }
+        
+        
     }
     
 `;
-export default GlobalStyle;

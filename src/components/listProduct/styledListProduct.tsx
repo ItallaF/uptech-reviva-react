@@ -99,25 +99,25 @@ export const ProductListImageButtonSize = styled.label`
     border-radius: 15%;
     grid-column: 1;
     height: 4vh;
-    font-size: 3em;
+    font-size: 2rem;
     text-align: center;
     width: 2vw;
     @media screen and (max-width: 576px){
         height: 4vh;
         width: 5vw;
-        font-size: 3em;
+        font-size: 2rem;
         text-align: center;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
         height: 4vh;
         width: 4vw;
-        font-size: 3em;
+        font-size: 2rem;
         text-align: center;
     }
     @media screen and (min-width: 769px) and (max-width: 992px){
         height: 4vh;
         width: 3vw;
-        font-size: 3em;
+        font-size: 2rem;
         text-align: center;
     }
 `;
@@ -128,26 +128,27 @@ export const ProductListImageButtonSizeInput = styled.input`
 
 export const ProductListText = styled.div`
     font-weight: 400;
-    font-size: 2.9em;
-    height: 6vh;
+    font-size: 2.9rem;
+    height: 12vh;
     text-align: start;
     width: 100%;
     @media screen and (max-width: 576px){
         width: 50vw;
-        height: 5vh;
+        height: 12vh;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
         height: 0vh;
+        width: 34vw;
     }
     @media screen and (min-width: 769px) and (max-width: 992px){
-        height: 11vh;
+        height: 17vh;
     }
 `;
 
 export const ProductListPrice = styled.div`
     color: ${colorPreco};
     font-weight: bold;
-    font-size: 4em;
+    font-size: 4rem;
     height: 7vh;
     text-align: start;
     width: 100%;
@@ -155,6 +156,7 @@ export const ProductListPrice = styled.div`
     @media screen and (min-width: 577px) and (max-width: 768px){
         margin-top: 40%;
     }
+    
 `;
 
 export const ProductListButton = styled.div`
@@ -183,7 +185,8 @@ export const ProductListButtonBag = styled.button`
     @media screen and (min-width: 577px) and (max-width: 768px){
         height: 8vh;
         line-height: 8vh;
-        width: 33vw;
+        width: 30vw;
+
     }
     @media screen and (min-width: 769px) and (max-width: 992px){
         height: 8vh;
@@ -197,4 +200,5 @@ export const ProductListButtonSvg = styled.div`
     place-self: end;
     margin-top: 3%;
     min-block-size: fit-content;
+    padding: 1%;
 `;

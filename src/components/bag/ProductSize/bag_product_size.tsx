@@ -1,5 +1,4 @@
 import { useRecoilValue } from 'recoil';
-import style from './productSize.module.scss';
 import { listCarState } from '../StateCart/listCartState';
 import { MyBagButtonSize, MyBagButtonSizeInput, MyBagProductTitle } from './styledProductSize';
 

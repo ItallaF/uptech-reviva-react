@@ -19,7 +19,7 @@ export const HeaderLogoText = styled.p`
     font-family: ${font};
     font-style: normal;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 7em;
     justify-self: end;
     margin-top: auto;
 `;

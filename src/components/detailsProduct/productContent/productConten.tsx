@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { listProduct } from "../../../datas/date";
 import { NotFound } from "../../../pages/NotFound/notFoud";
@@ -8,7 +8,6 @@ import { decrementStock } from "../../listProduct/functionStock";
 import { ProductListImageButtonSizeInput } from "../../listProduct/styledListProduct";
 import { ProductStock } from "../../types/typeCart";
 import {
-    ButtonBag,
     ButtonBuy,
     ButtonImage,
     ButtonSvg,

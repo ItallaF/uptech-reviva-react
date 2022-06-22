@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import { listProduct } from '../../datas/date';
 import { addToCart } from '../bag/FunctionsCart/addPtoduct_cart';

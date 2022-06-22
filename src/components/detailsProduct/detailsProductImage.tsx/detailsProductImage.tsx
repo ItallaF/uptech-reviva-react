@@ -1,8 +1,7 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { listProduct } from "../../../datas/date";
 import { NotFound } from "../../../pages/NotFound/notFoud";
-import { ProductStock } from "../../types/typeCart";
 import { ImageProduct } from "./styles/styledImageProduct";
 import ImageDetails from "./styles/styledProductImage";
 

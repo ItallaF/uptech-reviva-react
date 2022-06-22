@@ -56,14 +56,15 @@ export const BlogImageMainSize = styled.img`
 export const BlogImageMainText = styled.p`
     color: ${colorText};
     font-weight: 400;
-    font-size: 2.3em;
+    font-size: 1.9rem;
     width: 80%;
     @media screen and (max-width: 576px){
-        margin: 0 0 0 6%;
+        margin: 0 0 0 0%;
         line-height: 135%;
+        width: 98%;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        margin: 0 0 0 6%;
+        margin: 0 0 0 7%;
         line-height: 135%;
     }
 `;
@@ -103,7 +104,7 @@ export const BologImageSideSize = styled.img`
 
 export const BologImageSideText = styled.p`
     color: ${colorText};
-    font-size: 2.5em;
+    font-size: 1.9rem;
     margin: 0%;  
     @media screen and (max-width: 576px){
         margin-top: 2%;

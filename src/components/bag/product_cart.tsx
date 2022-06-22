@@ -30,7 +30,7 @@ export default function ProductBag(product: CartItens): any {
                         {products.nameProduct}
                     </MyBagProductTitle>
                     <MyBagProductDescription>
-                        {products.nameProduct}
+                        {products.description}
                     </MyBagProductDescription>
                 </div>
                 <div>

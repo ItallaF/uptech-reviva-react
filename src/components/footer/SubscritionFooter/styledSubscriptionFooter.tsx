@@ -17,6 +17,7 @@ export const FooterNewsletterText = styled.input`
     background: ${colorTextDestaque};
     border: 1px solid ${colorBorder};
     box-sizing: border-box;
+    font-size: 1rem;
     height: 3.5vh;
     width: 50%;
     @media screen and (max-width: 576px){
@@ -31,7 +32,8 @@ export const FooterNewsletterText = styled.input`
 export const FooterNewsletterButton = styled.button`
     background: ${colorBorder};
     height: 4vh;
-    @extend .newsletter;
+    width: 6vw;
+    font-size: 1rem;
     @media screen and (max-width: 576px){
         height: 6vh;
         width: 95%;

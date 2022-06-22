@@ -14,9 +14,8 @@ export const DetailsProducContentTitle = styled.h3`
 
 export const ProductDescription = styled.p`
     color: ${colorText};
-    font-style: ${font};
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.4rem;
     line-height: 160%;
 `;
 
@@ -65,6 +64,7 @@ export const ImageButtonSize = styled.label`
     border: 1px solid ${colorBorder};
     border-radius: 15%;
     height: 5vh;
+    font-size: 2rem;
     grid-column: 1;
     margin:  1%;
     width: 2.3vw;

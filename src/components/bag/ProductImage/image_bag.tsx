@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { listCarState } from '../StateCart/listCartState';
 import { CartItens } from '../../types/typeCart';

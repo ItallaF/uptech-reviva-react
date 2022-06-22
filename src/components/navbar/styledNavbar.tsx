@@ -33,7 +33,7 @@ export const MenuButton = styled.button`
     background-color: transparent;
     border: none;
     color: ${colorTextDestaque};
-    font-size: 7em;
+    font-size: 21em;
     max-block-size: -webkit-fill-available;
     place-content: flex-end;
     display: none;
@@ -54,7 +54,7 @@ export const MenuButton = styled.button`
 export const MenuLink = styled.a`
     color: ${colorTextDestaque};
     font-weight: 400;
-    font-size: 2.8em;
+    font-size: 9.8em;
     line-height: 10vh;
     list-style-type: none;        
     justify-content: space-between;
@@ -66,7 +66,7 @@ export const MenuLink = styled.a`
         text-align: center;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        font-size: 2.2em;
+        font-size: 8.2em;
         font-weight: 100;
     }
 `;

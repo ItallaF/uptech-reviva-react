@@ -10,13 +10,15 @@ export const FooterItensMenu = styled.li`
 
 export const FooterItensMenuLink = styled.a`
     color: #FFF;
-        text-decoration: none;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 4vh;
     }
     @media screen and (max-width: 576px){
-        font-size: 1em;
+        font-size: 1rem;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        font-size: 1.5em;
+        font-size: 1rem;
     }
 `;
 

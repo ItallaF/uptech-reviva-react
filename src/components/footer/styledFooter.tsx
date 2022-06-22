@@ -11,12 +11,12 @@ export const FooterContentSection = styled.footer`
 export const FooterTitle = styled.h4`
     color: ${colorTextDestaque};
     font-weight: bold;
-    font-size: 2.4em;
-    line-height: 1.5rem;
+    font-size: 14.4em;
+    line-height: 3.5rem;
     @media screen and (max-width: 576px){
-        font-size: 2.2em;
+        font-size: 1.2rem;
     }
     @media screen and (min-width: 577px) and (max-width: 768px){
-        font-size: 2.2em;
+        font-size: 14.4em;
     }
 `;
