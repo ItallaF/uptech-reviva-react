@@ -1,16 +1,16 @@
-import style from './navbar.module.scss';
+import { Menu, MenuButton, MenuLink, MenuList } from './styledNavbar';
 
 export default function Navbar(){
     return (
-        <section className={style.menu}>
-            <nav className={style.menu__lista}>
-                <button className={style.menu__botao} >&#9776;</button>
-                <a className={style.menu__link} href="#">Página Inicial</a>
-                <a className={style.menu__link} href="#">Moda Masculina</a>
-                <a className={style.menu__link} href="#">Moda Feminina</a>
-                <a className={style.menu__link} href="#">Moda Infantil</a>
-                <a className={style.menu__link} href="#">Moda Manual da Moda</a>
-            </nav>
-    </section>
+        <Menu>
+            <MenuList>
+                <MenuButton >&#9776;</MenuButton>
+                <MenuLink href="/">Página Inicial</MenuLink>
+                <MenuLink href="#">Moda Masculina</MenuLink>
+                <MenuLink href="#">Moda Feminina</MenuLink>
+                <MenuLink href="#">Moda Infantil</MenuLink>
+                <MenuLink href="#">Moda Manual da Moda</MenuLink>
+            </MenuList>
+    </Menu>
     )     
 }

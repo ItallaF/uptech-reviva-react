@@ -1,13 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './pages/home';
+import { GlobalStyle } from './globalStyle';
+
+import { RecoilRoot } from 'recoil';
+import ReactDOM from 'react-dom/client';
+import Routes from './routes';
 
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('root') 
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
 );
-
+root.render(
+  <React.StrictMode>
+    <GlobalStyle />
+    <RecoilRoot>
+      <Routes />
+    </RecoilRoot>
+  </React.StrictMode>
+);
