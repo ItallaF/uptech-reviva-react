@@ -1,26 +1,43 @@
-import { createContext, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
+import { CartItens } from "../components/types/typeCart";
 
 
 
-// export const CartContext = createContext();
-// CartContext.displayName = "Cart";
+interface ICartProvider {
+    children: ReactNode;
+}
 
-// export const CartProvider = ({ childrem }: any) => {
-//     const [cart, setCart] = useState([]);
-//     const [quantyProduct, setQuantyProduct] = useState(0);
-//     const [total, setTotal] = useState(0);
+interface ICartContext {
+    ProductCart: CartItens[],
+    setProductCart?: (ProductCart: CartItens[]) => void,
+    // quantyProduct: Number,
+    // setQuantyProduct?: (quantyProduct: Number) => void;
+}
 
-//     return (
-//         <CartContext.Provider
-//             value={{
-//                 cart,
-//                 setCart,
-//                 quantyProduct,
-//                 setQuantyProduct,
-//                 total,
-//                 setTotal
-//             }}>
-//                 {childrem}
-//         </CartContext.Provider>
-//     )
-// };
+
+export const CartContext = createContext<ICartContext>({ ProductCart: [] });
+CartContext.displayName = "Cart";
+
+export const CartProvider = ({ childrem }: any) => {
+    const [ProductCart, setProductCart] = useState<CartItens[]>([]);
+    const [quantyProduct, setQuantyProduct] = useState(0);
+    const [total, setTotal] = useState(0);
+
+    return (
+        <CartContext.Provider value={{ ProductCart, setProductCart }}>
+            {childrem}
+        </CartContext.Provider>
+    )
+};
+
+export const useCartContext = () => {
+    const { ProductCart, setProductCart } = useContext(CartContext);
+
+    function addProductCart(newProduct: CartItens) {
+        const productInCart = ProductCart.some(item => item.id === newProduct.id);
+        if(!productInCart) {
+            newProduct.quantity = 1;
+            // return setProductCart(cartPrior => [...cartPrior, newProduct]);
+        }
+    }
+};

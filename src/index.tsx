@@ -3,6 +3,7 @@ import { GlobalStyle } from './globalStyle';
 import ReactDOM from 'react-dom/client';
 import Routes from './routes';
 import { ProductProvider } from './contexts/productContext';
+import { CartProvider } from './contexts/cartContenxt';
 
 
 
