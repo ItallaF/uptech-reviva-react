@@ -14,8 +14,8 @@ export default function AppRouter() {
             <Routes>
                 <Route path='/' element={<PatternPage />}>
                     <Route index element={<Home />} />
-                    <Route path='/Details/:id' element={<Details />} />
-                    <Route path='/Cart' element={<Cart />} />
+                    {/* <Route path='/Details/:id' element={<Details />} />
+                    <Route path='/Cart/:id' element={<Cart />} /> */}
                 </Route>
                 <Route path='*' element={<NotFound />} />
             </Routes>
