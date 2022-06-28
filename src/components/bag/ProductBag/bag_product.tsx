@@ -1,13 +1,12 @@
-import { useRecoilValue } from 'recoil';
-import { listCarState } from '../StateCart/listCartState';
+import { useCartContext } from '../../../contexts/cartContenxt';
 import { MyBagProductDescription, MyBagProductTitle } from './styledProduct';
 
 
 export default function BagProduct(): any {
-
-    const productCart = useRecoilValue(listCarState);
+    const {ProductCart, newQuanty} = useCartContext();
+    
     return (
-        productCart.map((products) =>
+        ProductCart.map((products) =>
             <div>
                 <MyBagProductTitle>
                     {products.nameProduct}

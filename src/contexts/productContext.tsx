@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { listProduct } from '../datas/date';
-import { ProductStock } from "../components/types/typeCart";
+import { ProductStock } from "../components/types/types";
 
 interface IProductProvider {
     children: ReactNode;
@@ -16,6 +16,10 @@ export const ProductsContext = createContext<IProductContext>({ listproducts: []
 
 export const ProductProvider = ({ children }: IProductProvider) => {
     const [listproducts, setListproducts] = useState<ProductStock[]>(listProduct);
+
+    useEffect(()=>{
+        setListproducts(listProduct);
+    },[]);
 
     return (
         <ProductsContext.Provider value={{ listproducts, setListproducts }}>

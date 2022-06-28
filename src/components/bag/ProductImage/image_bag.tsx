@@ -1,16 +1,13 @@
-import { useRecoilValue } from 'recoil';
-import { listCarState } from '../StateCart/listCartState';
-import { CartItens } from '../../types/typeCart';
+import { useCartContext } from '../../../contexts/cartContenxt';
+import { CartItens } from '../../types/types';
 import { MyBagImage, MyBagImageProduct } from './styledImagebag';
 
 
 export default function ImageBag(): any {
-  const getImages = useRecoilValue<CartItens[]>(listCarState)
-  const images = [...getImages];
-  //const productCart = useRecoilValue(listCarState);
+  const {ProductCart } = useCartContext();
 
   return (
-    images.map((products) =>
+    ProductCart.map((products) =>
       <MyBagImage>
         <MyBagImageProduct src={products.images[0].url}></MyBagImageProduct>
       </MyBagImage>

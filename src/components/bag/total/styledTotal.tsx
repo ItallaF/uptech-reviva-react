@@ -8,7 +8,7 @@ export const MyBagTotal = styled.div`
     width: 18vw;
     grid-column: 7/7;
     grid-row: span 3/span 1;
-    margin-top: -279%;
+    margin-top: -130%;
     @media screen and (max-width: 576px){
         grid-column: 1/7;
         justify-content:center;

@@ -14,7 +14,9 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <ProductProvider>
+      <CartProvider>
       <Routes />
+      </CartProvider>
     </ProductProvider>
   </React.StrictMode>
 );

@@ -1,14 +1,13 @@
-import { useRecoilValue } from 'recoil';
-import { listCarState } from '../StateCart/listCartState';
+import { useCartContext } from '../../../contexts/cartContenxt';
 import { MyBagButtonSize, MyBagButtonSizeInput, MyBagProductTitle } from './styledProductSize';
 
 
 export default function ProductSizeBag() {
-    const productCart = useRecoilValue(listCarState);
+    const {ProductCart, newQuanty} = useCartContext();
 
     return (
         <>
-            {productCart.map((products) =>
+            {ProductCart.map((products) =>
                 <div>
                     <MyBagProductTitle>
                         Tamanho escolhido
