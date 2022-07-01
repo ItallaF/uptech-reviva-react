@@ -1,18 +1,17 @@
-import { useRecoilValue } from 'recoil';
-import { listCarState } from '../StateCart/listCartState';
+import { useCartContext } from '../../../contexts/cartContenxt';
 import { MyBagProductPrice, MyBagProductTitle } from './styledSubtotal';
 
 
 export default function Subtotal() {
-    const productCart = useRecoilValue(listCarState);
+    const {ProductCart, newQuanty} = useCartContext();
     return (
         <div>
             <MyBagProductTitle>
                 Subtotal
             </MyBagProductTitle>
             <MyBagProductPrice>R$
-                {productCart.map((products) =>
-                    (products.price * products.quantity).toFixed(2).replace('.', ','))}
+                {ProductCart.map((products) =>
+                    (products.price * products.quantityAvailable).toFixed(2).replace('.', ','))}
             </MyBagProductPrice>
         </div>
     );

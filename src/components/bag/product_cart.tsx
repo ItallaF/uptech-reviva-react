@@ -1,26 +1,14 @@
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { CartItens } from '../types/typeCart';
-import { listCarState } from './StateCart/listCartState';
-import { listProduct } from '../../datas/date';
 import { MyBagButtonSize, MyBagButtonSizeInput, MyBagImage, MyBagImageProduct, MyBagProductDescription, MyBagProductPrice, MyBagProductTitle, MyBagQuantityProductValue, ProductMyBag } from './styledProductCart';
+import { useCartContext } from '../../contexts/cartContenxt';
 
 
 
-export default function ProductBag(product: CartItens): any {
-    const listProductBag = useRecoilValue(listCarState);
-
-    const newQuanty = useSetRecoilState(listCarState);
-    function handleChangeQuantity(id: number, quantity: number) {
-        const newQuantyProduct = listProductBag.map((item) => {
-            if (item.id === id) return ({ ...item, quantity })
-            return item
-        })
-        newQuanty(newQuantyProduct);
-    };
+export default function ProductBag(): any {
+    const { ProductCart, newQuanty, addProductCart, removeProduct} = useCartContext();
 
 
     return (
-        listProductBag.map((products) =>
+        ProductCart?.map((products) =>
             <ProductMyBag>
                 <MyBagImage>
                     <MyBagImageProduct src={products.images[0].url}></MyBagImageProduct>
@@ -56,18 +44,18 @@ export default function ProductBag(product: CartItens): any {
                     <MyBagProductTitle>
                         Quantidade
                     </MyBagProductTitle>
-                    <MyBagQuantityProductValue type="number" id={`${products.id}`} name={`${products.id}`}
-                        min={1} max={99} onChange={(e) =>
-                            handleChangeQuantity(products.id, +e.target.value)}
-                        value={products.quantity}
-                    />
+                    <MyBagQuantityProductValue onClick={() => addProductCart(products)}> + </MyBagQuantityProductValue>
+                    <MyBagProductPrice>
+                        {products.quantityAvailable}
+                    </MyBagProductPrice>
+                    <MyBagQuantityProductValue onClick={() => removeProduct(products.id)}> - </MyBagQuantityProductValue>
                 </div>
                 <div>
                     <MyBagProductTitle>
                         Subtotal
                     </MyBagProductTitle>
                     <MyBagProductPrice>R$
-                        {(products.price * products.quantity).toFixed(2).replace('.', ',')}
+                        {(products.price * products.quantityAvailable).toFixed(2).replace('.', ',')}
                     </MyBagProductPrice>
                 </div>
             </ProductMyBag>

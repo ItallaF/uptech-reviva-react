@@ -22,7 +22,7 @@ export interface CartItens {
   price: number;
   description: string;
   sizesAvailable: string[];
-  quantity: number;
+  quantityAvailable: number;
   sectionProduct: number;
   images: productImage[];
 };

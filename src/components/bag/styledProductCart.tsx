@@ -172,7 +172,7 @@ export const MyBagButtonQuanty = styled.div`
     }
 `;
 
-export const MyBagQuantityProductValue = styled.input`
+export const MyBagQuantityProductValue = styled.button`
     align-self: center;
     color: ${colorPreco};
     font-weight: bold;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { GlobalStyle } from './globalStyle';
-
-import { RecoilRoot } from 'recoil';
 import ReactDOM from 'react-dom/client';
 import Routes from './routes';
+import { ProductProvider } from './contexts/productContext';
+import { CartProvider } from './contexts/cartContenxt';
 
 
 
@@ -13,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyle />
-    <RecoilRoot>
+    <ProductProvider>
+      <CartProvider>
       <Routes />
-    </RecoilRoot>
+      </CartProvider>
+    </ProductProvider>
   </React.StrictMode>
 );
