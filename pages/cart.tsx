@@ -10,12 +10,12 @@ import { MyBag } from '../src/components/bag/styledMyBag';
 const PageCart: NextPageWithLayout = () => {
 	return (
 		<>
-			<MyBag>
+			<section>
 				<ProductBag />
 				<MyBag2>
 					<Total />
 				</MyBag2>
-			</MyBag>
+			</section>
 		</>
 	);
 }
